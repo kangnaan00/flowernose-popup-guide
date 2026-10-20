@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FLOWER KNOWS 팝업 · 릴스 가이드</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;700;900&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root{
+  --paper:#FDF4F7; --ink:#2A1520; --ink-2:#7A5060; --ink-3:#B09098;
+  --line:#F0D8E4; --panel:#FFFFFF; --panel-2:#FAF0F4;
+  --accent:#C0526A; --accent-soft:#F5D8E0; --accent-bright:#E07090;
+  --tag-bg:#FAF0F4;
+  --shadow:0 1px 2px rgba(60,20,30,.05), 0 6px 18px rgba(60,20,30,.07);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#120810; --ink:#F5E0E8; --ink-2:#C09090; --ink-3:#8A7080;
+    --line:#2E1822; --panel:#1E1018; --panel-2:#261420;
+    --accent:#E07090; --accent-soft:#3A1828; --accent-bright:#F0A0B8;
+    --tag-bg:#1E1018;
+    --shadow:0 1px 2px rgba(0,0,0,.5), 0 6px 18px rgba(0,0,0,.4);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#120810; --ink:#F5E0E8; --ink-2:#C09090; --ink-3:#8A7080;
+  --line:#2E1822; --panel:#1E1018; --panel-2:#261420;
+  --accent:#E07090; --accent-soft:#3A1828; --accent-bright:#F0A0B8;
+  --tag-bg:#1E1018;
+  --shadow:0 1px 2px rgba(0,0,0,.5), 0 6px 18px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box}
+html{color-scheme:light dark}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:"Noto Sans KR",-apple-system,"Apple SD Gothic Neo",sans-serif;
+  font-size:15px;line-height:1.65;
+  padding-inline:16px;
+  padding-block:0 72px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:760px;margin:0 auto}
+h1,h2,h3{text-wrap:balance;margin:0;line-height:1.2}
+p{margin:0}
+
+/* ── Header ── */
+.page-top{
+  padding-block:36px 24px;
+  border-bottom:2px solid var(--ink);
+  margin-bottom:32px;
+}
+.eyebrow{
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--accent);font-weight:700;margin-bottom:10px;
+}
+.brand-title{
+  font-family:"Bebas Neue",sans-serif;
+  font-size:clamp(40px,10vw,72px);
+  line-height:1; letter-spacing:.03em;
+  color:var(--ink);
+}
+.brand-sub{
+  margin-top:8px;font-size:13px;color:var(--ink-3);font-weight:400;
+}
+
+/* ── Section ── */
+.section{margin-bottom:32px}
+.section-label{
+  font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:700;
+  margin-bottom:14px;
+  padding-bottom:8px;
+  border-bottom:1px solid var(--line);
+}
+
+/* ── Identity card ── */
+.identity{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-left:3px solid var(--accent);
+  border-radius:8px;
+  padding:20px 22px;
+  box-shadow:var(--shadow);
+}
+.identity-philosophy{
+  font-family:"Bebas Neue",sans-serif;
+  font-size:clamp(22px,4.5vw,34px);
+  line-height:1.1;
+  color:var(--ink);
+  margin-bottom:10px;
+}
+.identity-desc{
+  font-size:13.5px;color:var(--ink-2);line-height:1.75;
+}
+.identity-desc strong{color:var(--ink);font-weight:700}
+.slogan{
+  margin-top:14px;padding-top:14px;
+  border-top:1px solid var(--line);
+  font-size:11px;letter-spacing:.1em;
+  color:var(--ink-3);line-height:1.7;font-weight:500;
+}
+
+/* ── Info rows ── */
+.info-table{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.info-row{
+  display:flex;gap:0;
+  border-bottom:1px solid var(--line);
+}
+.info-row:last-child{border-bottom:none}
+.info-key{
+  width:72px; flex-shrink:0;
+  background:var(--panel-2);
+  padding:12px 14px;
+  font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:700;
+  display:flex;align-items:center;
+}
+.info-val{
+  flex:1;padding:12px 16px;
+  font-size:13.5px;color:var(--ink);line-height:1.6;
+  min-width:0;
+}
+.badge{
+  display:inline-block;
+  background:var(--accent);color:#fff;
+  font-size:11.5px;font-weight:900;letter-spacing:.06em;
+  padding:3px 9px;border-radius:3px;
+}
+
+/* ── Feature list ── */
+.feature-list{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.feature-item{
+  display:flex;gap:0;
+  border-bottom:1px solid var(--line);
+  align-items:stretch;
+}
+.feature-item:last-child{border-bottom:none}
+.feature-dot{
+  width:44px;flex-shrink:0;
+  background:var(--panel-2);
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Bebas Neue",sans-serif;
+  font-size:20px;color:var(--accent);
+  border-right:1px solid var(--line);
+}
+.feature-body{
+  flex:1;padding:12px 16px;
+  display:flex;flex-direction:column;gap:4px;
+  min-width:0;
+}
+.feature-text{font-size:14px;color:var(--ink);line-height:1.55;word-break:keep-all}
+.feature-sub{font-size:12px;color:var(--ink-3)}
+
+/* ── Hook list ── */
+.hook-list{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.hook-item{
+  display:flex;gap:0;
+  border-bottom:1px solid var(--line);
+  align-items:stretch;
+}
+.hook-item:last-child{border-bottom:none}
+.hook-num{
+  width:44px;flex-shrink:0;
+  background:var(--panel-2);
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Bebas Neue",sans-serif;
+  font-size:20px;color:var(--accent);
+  border-right:1px solid var(--line);
+}
+.hook-body{
+  flex:1;padding:12px 16px;
+  display:flex;flex-direction:column;gap:6px;
+  min-width:0;
+}
+.hook-text{font-size:14px;color:var(--ink);line-height:1.55;word-break:keep-all}
+.copy-btn{
+  align-self:flex-start;
+  background:transparent;
+  border:1px solid var(--line);
+  color:var(--ink-3);
+  font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  padding:3px 9px;border-radius:3px;
+  cursor:pointer;
+  font-family:"Noto Sans KR",sans-serif;
+  transition:border-color .15s, color .15s;
+}
+.copy-btn:hover{border-color:var(--ink-3);color:var(--ink)}
+.copy-btn.ok{border-color:var(--accent);color:var(--accent)}
+
+/* ── Scene guide ── */
+.scene-card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:18px 20px;
+  box-shadow:var(--shadow);
+  margin-bottom:12px;
+}
+.scene-header{
+  display:flex;align-items:center;gap:10px;margin-bottom:14px;
+}
+.scene-num{
+  width:30px;height:30px;flex-shrink:0;
+  background:var(--accent);color:#fff;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Bebas Neue",sans-serif;font-size:18px;
+}
+.scene-title{font-size:15px;font-weight:700;color:var(--ink)}
+.shoot-label{
+  font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:700;margin-bottom:8px;
+}
+.shoot-list{
+  list-style:none;margin:0;padding:0;
+  display:flex;flex-direction:column;gap:5px;
+}
+.shoot-list li{
+  display:flex;gap:8px;font-size:13.5px;color:var(--ink-2);
+  align-items:flex-start;
+}
+.shoot-list li::before{
+  content:"—";color:var(--accent);flex-shrink:0;
+}
+.note-box{
+  background:var(--accent-soft);
+  border-left:3px solid var(--accent);
+  border-radius:0 6px 6px 0;
+  padding:10px 14px;
+  margin-top:12px;
+  font-size:13px;color:var(--ink-2);line-height:1.65;
+}
+.note-box strong{color:var(--ink);font-weight:700}
+
+/* ── Product tags ── */
+.product-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.ptag{
+  background:var(--tag-bg);
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:5px 11px;
+  font-size:13px;color:var(--ink-2);
+}
+
+/* ── Footer ── */
+.page-footer{
+  margin-top:40px;padding-top:20px;
+  border-top:1px solid var(--line);
+  font-size:12px;color:var(--ink-3);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- Header -->
+  <div class="page-top">
+    <div class="eyebrow">릴스 바이럴 가이드</div>
+    <h1 class="brand-title">FLOWER KNOWS</h1>
+    <p class="brand-sub">서울 팝업 · 성동구 연무장길 16 &nbsp;·&nbsp; 10/16(금) – 10/25(일)</p>
+  </div>
+
+  <!-- 브랜드 아이덴티티 -->
+  <div class="section">
+    <div class="section-label">브랜드 아이덴티티</div>
+    <div class="identity">
+      <div class="identity-philosophy">Beauty Inspired by Flowers</div>
+      <div class="identity-desc">
+        <strong>FLOWER KNOWS(플라워노즈)</strong> — 꽃에서 영감을 받은 비주얼 메이크업 브랜드.<br>
+        <strong>장원영 착용</strong>으로 화제. 2026년 <strong>10주년 기념</strong> 신규 컬렉션 '스노우발레' 국내 최초 공개.
+      </div>
+      <div class="slogan">
+        DIY PALETTE · SNOW BALLET COLLECTION · SEOUL POP-UP 2026
+      </div>
+    </div>
+  </div>
+
+  <!-- 팝업 정보 -->
+  <div class="section">
+    <div class="section-label">팝업 정보</div>
+    <div class="info-table">
+      <div class="info-row">
+        <span class="info-key">장소</span>
+        <span class="info-val">성동구 연무장길 16<br><span style="font-size:12px;color:var(--ink-3)">올리브영 성수 옆</span></span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">기간</span>
+        <span class="info-val">10/16(금) – 10/25(일)</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">시간</span>
+        <span class="info-val">월–목 11:00–20:00<br>금·토·일 10:30–20:30</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">할인</span>
+        <span class="info-val">
+          <span class="badge">전 상품 10% 할인</span>&nbsp;
+          <span class="badge">DIY 팔레트 25% 할인</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 촬영 일정 -->
+  <div class="section">
+    <div class="section-label">촬영 일정</div>
+    <div class="info-table">
+      <div class="info-row">
+        <span class="info-key">1차</span>
+        <span class="info-val">10/16(목) – 10/17(금) &nbsp; 현장 방문 · 촬영 컨펌 · 업로드</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">2차</span>
+        <span class="info-val">10/20(월) – 10/23(목) &nbsp; 현장 방문 · 촬영 컨펌 · 업로드</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 주요 소구점 -->
+  <div class="section">
+    <div class="section-label">주요 소구점</div>
+    <div class="feature-list">
+      <div class="feature-item">
+        <span class="feature-dot">01</span>
+        <div class="feature-body">
+          <span class="feature-text"><strong>스노우발레</strong> 신규 컬렉션 국내 최초 공개</span>
+          <span class="feature-sub">10주년 기념 · 2026 신작</span>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-dot">02</span>
+        <div class="feature-body">
+          <span class="feature-text">DIY 팔레트 제작 체험존</span>
+          <span class="feature-sub">팝업 한정 25% 할인 · 56,000원 → 42,000원</span>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-dot">03</span>
+        <div class="feature-body">
+          <span class="feature-text">전 상품 10% 할인 · 외국인 택스리펀 가능</span>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-dot">04</span>
+        <div class="feature-body">
+          <span class="feature-text">포토부스 / 룰렛 이벤트 / 럭키드로우 / 금액대별 사은품</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 후킹 문구 -->
+  <div class="section">
+    <div class="section-label">자막 후킹 문구 — 조합해서 사용</div>
+    <div class="hook-list">
+
+      <div class="hook-item">
+        <span class="hook-num">01</span>
+        <div class="hook-body">
+          <span class="hook-text">플라워노즈 역대급 신상 팝업</span>
+          <button class="copy-btn" onclick="cp(this,'플라워노즈 역대급 신상 팝업')">COPY</button>
+        </div>
+      </div>
+
+      <div class="hook-item">
+        <span class="hook-num">02</span>
+        <div class="hook-body">
+          <span class="hook-text">성수 역대급 신상 팝업</span>
+          <button class="copy-btn" onclick="cp(this,'성수 역대급 신상 팝업')">COPY</button>
+        </div>
+      </div>
+
+      <div class="hook-item">
+        <span class="hook-num">03</span>
+        <div class="hook-body">
+          <span class="hook-text">성수 올리브영 옆 장원영 화장품 팝업</span>
+          <button class="copy-btn" onclick="cp(this,'성수 올리브영 옆 장원영 화장품 팝업')">COPY</button>
+        </div>
+      </div>
+
+      <div class="hook-item">
+        <span class="hook-num">04</span>
+        <div class="hook-body">
+          <span class="hook-text">성수에서 나만의 팔레트 만들기</span>
+          <button class="copy-btn" onclick="cp(this,'성수에서 나만의 팔레트 만들기')">COPY</button>
+        </div>
+      </div>
+
+      <div class="hook-item">
+        <span class="hook-num">05</span>
+        <div class="hook-body">
+          <span class="hook-text">성수에서 DIY 팔레트 만들기</span>
+          <button class="copy-btn" onclick="cp(this,'성수에서 DIY 팔레트 만들기')">COPY</button>
+        </div>
+      </div>
+
+      <div class="hook-item">
+        <span class="hook-num">06</span>
+        <div class="hook-body">
+          <span class="hook-text">SNS에서 난리난 팝업</span>
+          <button class="copy-btn" onclick="cp(this,'SNS에서 난리난 팝업')">COPY</button>
+        </div>
+      </div>
+
+    </div>
+    <p style="margin-top:10px;font-size:12px;color:var(--ink-3)">※ 장원영 소구 시 이미지 적극 활용 · '스노우발레' 최초 공개 강조</p>
+  </div>
+
+  <!-- 장면별 촬영 가이드 -->
+  <div class="section">
+    <div class="section-label">장면별 촬영 가이드</div>
+
+    <div class="scene-card">
+      <div class="scene-header">
+        <span class="scene-num">1</span>
+        <span class="scene-title">DIY 팔레트 제작 과정</span>
+      </div>
+      <div class="shoot-label">촬영 리스트</div>
+      <ul class="shoot-list">
+        <li>섀도우 하나하나 넣는 장면</li>
+        <li>케이스에 예쁘게 담긴 장면</li>
+        <li>케이스를 여는 장면</li>
+      </ul>
+      <div class="note-box">흔들리지 않게 예쁘게 — <strong>매장 직원 도움 요청</strong> or 삼각대 지참</div>
+    </div>
+
+    <div class="scene-card">
+      <div class="scene-header">
+        <span class="scene-num">2</span>
+        <span class="scene-title">제품 샷</span>
+      </div>
+      <div class="shoot-label">촬영 리스트</div>
+      <ul class="shoot-list">
+        <li>인기 제품 2–3개 클로즈업</li>
+        <li>제품이 예쁘게 깔린 매대 전체 샷</li>
+        <li>신규 컬렉션 '스노우발레' 메인 제품 위주</li>
+        <li>매장 앞 모습 — 멀리서 전체 보이게</li>
+        <li>올리브영 비추고 매장 전체 보여지게</li>
+      </ul>
+      <div class="note-box">제품을 위주로 정말 예쁘게 — <strong>이것만으로 300만 조회수 가능</strong></div>
+    </div>
+
+    <div class="scene-card">
+      <div class="scene-header">
+        <span class="scene-num">3</span>
+        <span class="scene-title">체험 · 이벤트존</span>
+      </div>
+      <div class="shoot-label">촬영 리스트</div>
+      <ul class="shoot-list">
+        <li>포토부스 촬영 장면</li>
+        <li>룰렛 / 럭키드로우 이벤트 참여 장면</li>
+        <li>사은품 언박싱</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- 주요 제품 태그 -->
+  <div class="section">
+    <div class="section-label">주요 소재</div>
+    <div class="product-tags">
+      <span class="ptag">스노우발레 컬렉션</span>
+      <span class="ptag">DIY 팔레트</span>
+      <span class="ptag">아이섀도우</span>
+      <span class="ptag">립 제품</span>
+      <span class="ptag">장원영 착용템</span>
+      <span class="ptag">포토부스</span>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>FLOWER KNOWS 서울 팝업 · 성수 · 2026.10.16–25</span>
+    <span>릴스 제작용 내부 가이드</span>
+  </div>
+
+</div>
+
+<script>
+function cp(btn, text) {
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = 'COPIED';
+    btn.classList.add('ok');
+    setTimeout(() => { btn.textContent = 'COPY'; btn.classList.remove('ok'); }, 1500);
+  }).catch(() => {
+    const sel = window.getSelection();
+    const range = document.createRange();
+    range.selectNode(btn.previousElementSibling);
+    sel.removeAllRanges(); sel.addRange(range);
+  });
+}
+</script>
+</body>
+</html>
